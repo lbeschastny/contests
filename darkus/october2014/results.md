@@ -5,6 +5,7 @@
 | mcdarwinn | 0.14 | 53.83 | OK |
 | dnnx | 0 | 0.11 | OK |
 | nigredo | 0 | 0.59 | OK |
+| morrom | 0.04 | 13.55 | OK |
 | valiev | 0 | 1.02 | OK |
 | gassa | 0 | 0.15 | FAILED |
 | cypok | 0 | 0.04 | OK |
