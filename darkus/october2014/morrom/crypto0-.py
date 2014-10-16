@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 #WARNING! Wrote under windows. Not tested on linux.
 #dict - matrix storage
 d={}

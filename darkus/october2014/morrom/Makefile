@@ -2,7 +2,7 @@ all:
 	
 
 run:
-	echo $N | time ./crypto0.py > /dev/null 2> time$N
+	time ./crypto0-.py $N > /dev/null 2> time$N
 
 check:
-	echo $N | ./crypto0.py | ./n.pl > result$N
+	./crypto0-.py $N | ./n2.pl > result$N
