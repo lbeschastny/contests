@@ -65,25 +65,26 @@ let makeSieve width =
     |> Seq.map ^<| mapCells width
 
 let show width (solution: (int*int) list) =
-    let out = Array2D.create width width " . "
+    let out = Array2D.create width width "."
     for (y, x) in solution do
-        out.[y, x] <- "( )"
+        out.[y, x] <- "X"
     for i in [0..width-1] do
         for j in [0..width-1] do
             printf "%s" out.[i, j]
         printfn ""
+    printfn ""
 
 let run width =
     makeSieve width
-    .|> (Seq.toList >> List.length >> (printfn "Total: %d results."))
+//    .|> (Seq.toList >> List.length >> (printfn "Total: %d results."))
 (*
     // Debug 2 - source
     .|> Seq.iteri ^<| fun i solution ->
                         Seq.iter(printf "%A ") solution
                         printfn " <- %d " i
 *)
-    .|> Seq.iteri ^<| fun i solution -> printfn "Solution #%d" i; show width solution
-    .|> fun solutions -> printfn "%s" "Now testing..."
+    .|> Seq.iteri ^<| fun i solution -> show width solution
+//    .|> fun solutions -> printfn "%s" "Now testing..."
     .|> Seq.iter ^<| fun solution ->
         seq {
             for angle in [0..3] do
@@ -91,7 +92,7 @@ let run width =
         }
         |> Set.ofSeq
         |> fun result ->
-            if Set.count result = width*width then printf "." else printf "!"
+            if Set.count result = width*width then printf "" else printf "!"
 (*
     // Debug 3 - Sieve applied 4 times, should be a filled matrix
     |> Seq.iteri ^<| fun i solution ->
@@ -102,7 +103,7 @@ let run width =
 [<EntryPoint>]
 let main argv = 
     
-    run 6 |> ignore
+    run (int argv.[0]) |> ignore
 
     #if DEBUG
     printfn "Press Enter..."
