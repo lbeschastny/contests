@@ -20,11 +20,11 @@ foreach my $dir (@dir){
     }
 }
 
-my @table = (['N', @n, 'language', 'status']);
-push(@table, [map { '-----' } (1, @n, 1, 1)]);
+my @table = (['N', @n, 'language', 'SLOC', 'status']);
+push(@table, [map { '-----' } (1, @n, 1, 1, 1)]);
 foreach my $dir (@dir){
     my @res = map { $h{$dir}{$_} } @n;
-    push(@table, [$dir, @res, get_lang($dir), $h{$dir}{status}]);
+    push(@table, [$dir, @res, get_lang($dir), get_sloc($dir), $h{$dir}{status}]);
 }
 
 print (join "\n", map { '| ' . (join ' | ', @$_) . ' |' } @table);
@@ -45,6 +45,16 @@ sub extract_time {
 sub get_lang {
     my ($user) = @_;
     open(FILE, '<', "$user/lang");
+    my $str = <FILE>;
+    close FILE;
+    chomp $str;
+
+    return $str;
+}
+
+sub get_sloc {
+    my ($user) = @_;
+    open(FILE, '<', "$user/sloc");
     my $str = <FILE>;
     close FILE;
     chomp $str;

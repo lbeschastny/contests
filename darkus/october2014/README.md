@@ -23,7 +23,7 @@
 
 Сформировать результаты мне помог скрипт:
 
-    ./aggregate_results.pl
+    ./aggregate_results.pl > results.md
 
 Посмотреть можно [тут](https://github.com/maxim-komar/contests/blob/master/darkus/october2014/results.md)
 
@@ -31,7 +31,7 @@
 ## Комментарии к решениям:
 
 - решение darkus на N=6 исчерпало 64 GB памяти, потому статус failed
-- буду добавлять другие решения и обновлять таблицу
+- sloc посчитал ручками (github)
 
 ## Версии ПО:
 

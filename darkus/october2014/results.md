@@ -1,12 +1,12 @@
-| N | 4 | 6 | language | status |
-| ----- | ----- | ----- | ----- | ----- |
-| lbeschastny | 2.27 | 337.45 | Clojure | OK |
-| darkus | 0.03 | - | Haskell | FAILED |
-| mcdarwinn | 0.14 | 53.83 | Erlang | OK |
-| bytebuster463 | 0.07 | 5.22 | F# | OK |
-| dnnx | 0 | 0.11 | Haskell | OK |
-| nigredo | 0 | 0.59 | Haskell | OK |
-| morrom | 0.04 | 13.55 | Python | OK |
-| valiev | 0 | 1.02 | Python | OK |
-| gassa | 0 | 0.15 | D | FAILED |
-| cypok | 0 | 0.04 | C | OK |
+| N | 4 | 6 | language | SLOC | status |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| lbeschastny | 2.27 | 337.45 | Clojure | 41 | OK |
+| darkus | 0.03 | - | Haskell | 62 | FAILED |
+| mcdarwinn | 0.14 | 53.83 | Erlang | 79 | OK |
+| bytebuster463 | 0.07 | 5.22 | F# | 97 | OK |
+| dnnx | 0 | 0.11 | Haskell | 51 | OK |
+| nigredo | 0 | 0.59 | Haskell | 59 | OK |
+| morrom | 0.04 | 13.55 | Python | 61 | OK |
+| valiev | 0 | 1.02 | Python | 68 | OK |
+| gassa | 0 | 0.15 | D | 45 | FAILED |
+| cypok | 0 | 0.04 | C | 65 | OK |
