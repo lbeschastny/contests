@@ -1,5 +1,6 @@
 (ns crypto-square.core
-  (:require [clojure.math.combinatorics :as combo]))
+  (:require [clojure.math.combinatorics :as combo])
+  (:gen-class))
 
 (defn- rotate
   "Rotates mat Matrix clockwise"

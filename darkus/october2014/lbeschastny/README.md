@@ -13,6 +13,11 @@
 
     lein run 4
 
+## Compilation
+
+    lein with-profile build uberjar
+    java -jar ./target/crypto-square-0.1.0-SNAPSHOT-standalone.jar 4
+
 ## License
 
 Copyright © 2014 Leonid Beschastny
