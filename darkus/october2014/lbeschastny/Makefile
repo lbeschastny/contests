@@ -1,7 +1,8 @@
 all:
-	
+	lein with-profile build uberjar
+
 run:
-	time lein run $N > /dev/null 2> time$N
+	time java -jar ./target/crypto-square-0.1.0-SNAPSHOT-standalone.jar $N > /dev/null 2> time$N
 
 check:
-	lein run $N | ./n.pl > result$N
+	java -jar ./target/crypto-square-0.1.0-SNAPSHOT-standalone.jar $N | ./n.pl > result$N
